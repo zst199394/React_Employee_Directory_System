@@ -29,14 +29,14 @@ class Content extends React.Component {
     );
   };
   sortName =()=>{
-      
+
   }
   render() {
     return (
       <div>
         <h6>Empolyee data using RandomAPI</h6>
         <button onClick={this.sortName}>Sort by name</button>
-        <table class="table-success">
+        <table class="table table-dark table-striped">
           <thead>
             <tr>
               <th scope="col">name</th>
