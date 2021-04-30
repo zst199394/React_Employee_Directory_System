@@ -35,8 +35,11 @@ class Content extends React.Component {
     return (
       <div>
         <h6>Empolyee data using RandomAPI</h6>
-        <button onClick={this.sortName}>Sort by name</button>
-        <table class="table table-primary table-striped">
+        <form class ="row">
+        <input class="form-control col-9" type="search" placeholder="Search" aria-label="Search"></input>
+        <button class="col-3" onClick={this.sortName} type="placeholder">Sort by name</button>
+        </form>
+        <table class="table table-light table-striped">
           <thead>
             <tr>
               <th scope="col">name</th>
