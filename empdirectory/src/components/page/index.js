@@ -36,7 +36,7 @@ class Content extends React.Component {
       <div>
         <h6>Empolyee data using RandomAPI</h6>
         <button onClick={this.sortName}>Sort by name</button>
-        <table class="table table-dark table-striped">
+        <table class="table table-primary table-striped">
           <thead>
             <tr>
               <th scope="col">name</th>
