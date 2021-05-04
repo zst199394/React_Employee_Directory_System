@@ -23,7 +23,7 @@
   - [GitHub Info](#GitHub) 
 
   ## Libraries
-   * mongoose
+   * React
    * morgan
    * MongoDB
    * mongoose
@@ -31,7 +31,6 @@
    * html
    * javascript
    * life-server
-   * heroku
      
 
   ## Usage
