@@ -7,6 +7,7 @@ class Content extends React.Component {
     employeesList: [],
     search: "",
   };
+
   componentDidMount = () => {
     Axios.get("https://randomuser.me/api/?results=200&nat=us").then(
       (response) => {
@@ -23,21 +24,45 @@ class Content extends React.Component {
         }
         this.setState({
           employeesList: employee,
-          empDB: employee,
+          empDB: employeeDB,
         });
       }
     );
   };
-  sortName =()=>{
 
-  }
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+    let employeeSearch = this.state.empDB.filter(emp =>{
+      if (emp.name.first.toLowerCase().indexOf(value.toLowerCase()) !== -1 || emp.name.last.toLowerCase().indexOf(value.toLowerCase()) !== -1){
+        return true;
+      } 
+      return false;
+    })
+    let employee = [];
+        for (let i = 0; i < employeeSearch.length; i++) {
+          employee.push({
+            name: employeeSearch[i].name.first + ", " + employeeSearch[i].name.last,
+            email: employeeSearch[i].email,
+            cell: employeeSearch[i].cell,
+            picture: employeeSearch[i].picture.large,
+          });
+        }
+    console.log(employeeSearch);
+
+    // Updating the input's state
+    this.setState({
+      [name]: value,
+      employeesList: employee
+    });
+  };
+
   render() {
     return (
       <div>
         <h6>Empolyee data using RandomAPI</h6>
         <form class ="row">
-        <input class="form-control col-9" type="search" placeholder="Search" aria-label="Search"></input>
-        <button class="col-3" onClick={this.sortName} type="placeholder">Sort by name</button>
+        <input value={this.state.search} onChange={this.handleInputChange} name="search" class="form-control col-9" type="search" placeholder="Search" aria-label="Search"></input>
         </form>
         <table class="table table-light table-striped">
           <thead>
