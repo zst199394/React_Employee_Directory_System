@@ -1,5 +1,6 @@
 import Axios from "axios";
 import React from "react";
+import "./style.css";
 
 class Content extends React.Component {
   state = {
@@ -62,7 +63,7 @@ class Content extends React.Component {
       <div>
         <h6>Empolyee data using RandomAPI</h6>
         <form class ="row">
-        <input value={this.state.search} onChange={this.handleInputChange} name="search" class="form-control col-9" type="search" placeholder="Search" aria-label="Search"></input>
+        <input value={this.state.search} onChange={this.handleInputChange} name="search" className="form-control col-9"  type="search" placeholder="Search" aria-label="Search"></input>
         </form>
         <table class="table table-light table-striped">
           <thead>
