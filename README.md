@@ -6,8 +6,8 @@
   
   Github page link:
   https://zst199394.github.io/react_employee_directory_system/
-  
-  ![Github page](./public/assets/emp.png)
+
+  ![Github page](/public/assets/emp.png)
   ## Description
   ```md
   create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
