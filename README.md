@@ -4,7 +4,10 @@
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) ![GitHub license](https://img.shields.io/badge/Made%20by-%40zst199394-orange)    
   ![node.js badge](https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white)    
   
-
+  Github page link:
+  https://zst199394.github.io/react_employee_directory_system/
+  
+  ![Github page](./public/assets/emp.png)
   ## Description
   ```md
   create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
